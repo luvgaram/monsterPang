@@ -10,8 +10,8 @@ namespace Omock
     {
         //enum StoneType {fire=1, water, earth,...}  랄라라라라
         public int type;
-        int x;
-        int y;
+        public int x;
+        public int y;
 
         public Stone(int x, int y, Random random)
         {

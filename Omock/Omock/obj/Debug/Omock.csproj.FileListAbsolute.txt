@@ -40,3 +40,5 @@ C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\Omock\Omock\obj\Debug\Omock.p
 C:\Users\김다혜\Documents\Visual Studio 2013\Projects\monsterPang\Omock\Omock\obj\Debug\Omock.csprojResolveAssemblyReference.cache
 >>>>>>> a43fdc53e2969b6896d046435d831d325d6c2af4
 C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\Omock\Omock\obj\Debug\Omock.csprojResolveAssemblyReference.cache
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\monsterPang\Omock\Omock\bin\Debug\Omock.exe
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\monsterPang\Omock\Omock\bin\Debug\Omock.pdb
