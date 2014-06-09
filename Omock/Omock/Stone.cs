@@ -9,6 +9,7 @@ namespace Omock
     class Stone
     {
         //enum StoneType {fire=1, water, earth,...}  
+        // 수정
         public int type;
         int x;
         int y;
