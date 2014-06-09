@@ -9,10 +9,11 @@ namespace Omock
         {
             // 바둑판을 만듦
 
-            Board.Make();
-            Board.ShowBoard();
+            Board board = new Board();
+            board.Make();
+            board.ShowBoard();
             //Board.IsMovable();
-            Board.Delete();
+            board.Delete();
             /*
             if (Board.turn % 2 == 0 && score > 3)
                 Console.WriteLine("검은 돌■의 승리입니다.");

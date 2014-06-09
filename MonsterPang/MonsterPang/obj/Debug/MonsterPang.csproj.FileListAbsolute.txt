@@ -1,1 +1,2 @@
 C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
+C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
