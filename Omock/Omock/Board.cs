@@ -6,9 +6,6 @@ namespace Omock
     class Board
     {
         static public int boardSize = 6;
-        //static public int turn = 0;
-        //static public int deadTurn = 0;
-        //static public ArrayList Checks = new ArrayList();
         static public Stone[,] board;
         static public Random random = new Random(DateTime.Now.Millisecond);
 
@@ -19,7 +16,7 @@ namespace Omock
             {
                 for (int col = 0; col < boardSize; col++)
                 {
-                    board[col, row] = new Stone(random, row, col);// 새 돌 생성
+                    board[row, col] = new Stone(col, row, random);// row, col 자리 바꿈 
                 }
             }
         }
