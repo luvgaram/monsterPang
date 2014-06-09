@@ -309,16 +309,5 @@ namespace Omock
         }
     }
 
-    class Stone
-    {
-        public int type;
-        public int x, y;
-
-        public Stone(Random random, int x, int y)
-        {
-            type = random.Next(1, 7) ;
-            this.x = x;
-            this.y = y;
-        }
-    }
+ 
 }
