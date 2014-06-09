@@ -16,7 +16,7 @@ namespace Omock
             {
                 for (int col = 0; col < boardSize; col++)
                 {
-                    board[row, col] = new Stone(col, row, random);// row, col 자리 바꿈 
+                    board[row, col] = new Stone(col, row, random);// row, col 자리 바꿈  그랠라고!
                 }
             }
         }
