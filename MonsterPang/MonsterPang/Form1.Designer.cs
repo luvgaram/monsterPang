@@ -39,11 +39,13 @@
             // 
             this.stones.Cursor = System.Windows.Forms.Cursors.Hand;
             this.stones.Image = global::MonsterPang.Properties.Resources.stones;
-            this.stones.Location = new System.Drawing.Point(0, 328);
+            this.stones.Location = new System.Drawing.Point(0, 164);
             this.stones.Name = "stones";
-            this.stones.Size = new System.Drawing.Size(640, 632);
+            this.stones.Size = new System.Drawing.Size(320, 316);
+            this.stones.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.stones.TabIndex = 0;
             this.stones.TabStop = false;
+            this.stones.Click += new System.EventHandler(this.stones_Click);
             this.stones.Paint += new System.Windows.Forms.PaintEventHandler(this.MonsterPang_Paint);
             // 
             // monster
@@ -51,7 +53,8 @@
             this.monster.Image = global::MonsterPang.Properties.Resources.monster1;
             this.monster.Location = new System.Drawing.Point(0, 0);
             this.monster.Name = "monster";
-            this.monster.Size = new System.Drawing.Size(640, 328);
+            this.monster.Size = new System.Drawing.Size(320, 164);
+            this.monster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.monster.TabIndex = 1;
             this.monster.TabStop = false;
             this.monster.Paint += new System.Windows.Forms.PaintEventHandler(this.MonsterPang_Paint2);
@@ -60,7 +63,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 765);
+            this.ClientSize = new System.Drawing.Size(320, 479);
             this.Controls.Add(this.stones);
             this.Controls.Add(this.monster);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -74,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.stones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monster)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
