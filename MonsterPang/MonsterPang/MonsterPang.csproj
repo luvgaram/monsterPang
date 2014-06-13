@@ -52,6 +52,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -60,6 +63,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -70,9 +74,62 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\화면구성.psd" />
+    <None Include="Resources\화면구성_몬스터팡.psd" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monster1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monster2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monster3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monster4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monster5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monster6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stone1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stone2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stone3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stone4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stone5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stone6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stones.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yoge_characters.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\화면구성.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
