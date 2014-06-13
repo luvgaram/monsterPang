@@ -49,6 +49,7 @@
             this.stones.TabStop = false;
             this.stones.Click += new System.EventHandler(this.stones_Click);
             this.stones.Paint += new System.Windows.Forms.PaintEventHandler(this.MonsterPang_Paint);
+            this.stones.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stones_MouseDown);
             // 
             // monsterGUI
             // 
@@ -81,6 +82,9 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MonsterPang_Load);
+            this.Click += new System.EventHandler(this.MonsterPang_Click);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MonsterPang_MouseClick);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MonsterPang_MouseDown);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MonsterPang_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.stones)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monsterGUI)).EndInit();

@@ -29,3 +29,12 @@ C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\monsterPang\MonsterPang\Monst
 C:\Users\Garam\Dropbox\2014_1\Projects\_MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
 C:\Users\Garam\Dropbox\2014_1\Projects\_MonsterPang\MonsterPang\obj\Debug\MonsterPang.exe
 C:\Users\Garam\Dropbox\2014_1\Projects\_MonsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.exe
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\bin\Debug\MonsterPang.exe
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\bin\Debug\MonsterPang.pdb
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.csprojResolveAssemblyReference.cache
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.MonsterPang.resources
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.Properties.Resources.resources
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.csproj.GenerateResource.Cache

@@ -24,6 +24,7 @@ namespace MonsterPang
         private Bitmap st6Bitmap = Properties.Resources.stone6;
         private Stone[,] boardGUI = new Stone[Board.boardSize,Board.boardSize];
         private Stage stage;
+        private int level = 1; //전역변수로 추가
         private int lvUpTime = 0;
         public Point first;
         public Point second;
@@ -32,28 +33,26 @@ namespace MonsterPang
         public MonsterPang()
         {
             InitializeComponent();
+            stage = new Stage(level); //보드 만들고, 몬스터 만들고!
             StrtTimer();
-            int level = 1;
-            while (level < 6)
-            {
-                stage = new Stage(level);
-                stage.Play();
+        }
 
-                level++;
-                lvUpTime = 1;
-                switch(level)
-                {
-                    case 2: monsterGUI.Image = Properties.Resources.monster2;
-                        break;
-                    case 3: monsterGUI.Image = Properties.Resources.monster3;
-                        break;
-                    case 4: monsterGUI.Image = Properties.Resources.monster4;
-                        break;
-                    case 5: monsterGUI.Image = Properties.Resources.monster5;
-                        break;
-                    default:
-                        break;
-                }
+        public void ConvertMosterImage(int level)
+        {
+            switch (level)
+            {
+                case 1: monsterGUI.Image = Properties.Resources.monster1;
+                    break;
+                case 2: monsterGUI.Image = Properties.Resources.monster2;
+                    break;
+                case 3: monsterGUI.Image = Properties.Resources.monster3;
+                    break;
+                case 4: monsterGUI.Image = Properties.Resources.monster4;
+                    break;
+                case 5: monsterGUI.Image = Properties.Resources.monster5;
+                    break;
+                default:
+                    break;
             }
         }
 
@@ -62,7 +61,7 @@ namespace MonsterPang
             if (lvUpTime == 0)
             {
                 int x = 8;
-                int y = 4;
+                int y = 2;
 
                 for (int row = 0; row < boardGUI.GetLength(0); row++)
                 {
@@ -101,7 +100,6 @@ namespace MonsterPang
             else
             {
                 e.Graphics.DrawImage(lvupBitmap, 0, 6, lvupBitmap.Width, lvupBitmap.Height);
-                PauseTimer();
                 lvUpTime = 0;
             }
         }
@@ -117,39 +115,143 @@ namespace MonsterPang
 
         }
 
-        private void stones_Click(object sender, EventArgs e)
-        {
+ 
 
+        private void timer1_Tick(object sender, EventArgs e) //edit
+        {
+            if(stage.monster.hp>0)
+            {
+                DisableForm();
+                stage.DeleteContinuously();
+                Invalidate();
+                StopTimer();
+                EnableForm();
+                return;
+            }
+            else{
+                DisableForm();
+                StopTimer();
+                level++;
+                ConvertMosterImage(level);
+                lvUpTime = 1;
+                Invalidate();
+                EnableForm();
+                return;
+            }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            Invalidate();
-        }
 
         private void StrtTimer()
         {
             timer.Start();
         }
 
-        private void PauseTimer()
+        private void StopTimer() //edit
         {
-            Thread.Sleep(2000);
+            timer.Stop();
+        }
+
+        private void EnableForm()
+        {
+            this.Enabled = true;
+        }
+
+        private void DisableForm()
+        {
+            this.Enabled = false;
         }
 
         private void MonsterPang_MouseUp(object sender, MouseEventArgs e)
         {
+
+        }
+
+        private void MonsterPang_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void stones_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stones_MouseDown(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void MonsterPang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MonsterPang_MouseDown(object sender, MouseEventArgs e)
+        {
+                        int row1 = -1;
+            int col1 = -1;
+            int row2 = -1;
+            int col2 = -1;
+
             if (pointNum == 0)
             {
                 first = e.Location;
-                pointNum++;
+
+                for (int i = 0; i < boardGUI.GetLength(0); i++)
+                {
+                    if (((8 + (50 * i)) <= first.X) && (first.X < (8 + (50 * 1))))
+                    {
+                        col1 = i;
+                    }
+
+                    if (((164 + (52 * i)) <= first.Y) && (first.Y < (164 + (52 * 1))))
+                    {
+                        row1 = i;
+                    }
+                }//first.X, first.Y 를 row1, col1으로 변환해 할당하기, 이렇게 할당했기 때문에 엄한 데 클릭하면 할당이 안될 수 있다. 
+                if (row1 != -1 && col1 != -1) //할당 안되었을 때 대비하여!
+                {
+                    pointNum++;
+                }
+
             }
             else if (pointNum == 1)
             {
                 second = e.Location;
-                pointNum = 0;
-                //여기에 form1 눌러도 아무 변화 없도록 disabled 시켜놔야함.
+                for (int i = 0; i < boardGUI.GetLength(0); i++)
+                {
+                    if (((8 + (50 * i)) <= second.X) && (second.X < (8 + (50 * 1))))
+                    {
+                        col2 = i;
+                    }
+
+                    if (((164 + (52 * i)) <= second.Y) && (second.Y < (164 + (52 * 1))))
+                    {
+                        row2 = i;
+                    }
+                }
+                if (row2 != -1 && col2 != -1)
+                {
+                    pointNum = 0;
+                    if (stage.IsSwitchable(row1, col1, row2, col2))
+                    {
+                        stage.Swap(row1, col1, row2, col2);
+                        StrtTimer();
+
+                    }
+                    else
+                    {
+                        stage.board.Refresh();
+                        Invalidate();
+                        StrtTimer();
+                    }
+                    pointNum = 0;
+
+                }
             }
         }
+
+
+
     }
 }

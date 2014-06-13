@@ -11,12 +11,45 @@ namespace MonsterPang
         public Board board;
         public Monster monster;
         public int level;
+
         public Stage(int level)
         {
             board = new Board();
             monster = new Monster(level);
             this.level = level;
         }
+
+        public void DeleteContinuously()
+        {          
+            while (true)
+            {
+                int num = board.Deletable();
+                if (num > 0)
+                {
+                    Damage(num);
+                    board.Sort();
+                }
+                else
+                {
+                    return;
+                }
+            }
+             
+        }
+
+        public bool IsSwitchable(int row1, int col1, int row2, int col2)
+        {
+            return board.Switchable(row1, col1, row2, col2);
+        }
+
+        public void Swap(int row1, int col1, int row2, int col2)
+        {
+            board.Swap(row1, col1, row2, col2); 
+        }
+
+
+
+        /*
         public void Play()
         {
             while (monster.hp > 0)
@@ -51,6 +84,8 @@ namespace MonsterPang
                 }
             }
         }
+         */
+
         public void Damage(int num)
         {
             monster.hp = monster.hp - num;
