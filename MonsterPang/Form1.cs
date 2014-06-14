@@ -29,6 +29,10 @@ namespace MonsterPang
         public Point first;
         public Point second;
         public int pointNum = 0;
+        int row1 =-1;
+        int col1 =-1;
+        int row2 =-1;
+        int col2 = -1;
 
         public MonsterPang()
         {
@@ -101,6 +105,7 @@ namespace MonsterPang
             {
                 e.Graphics.DrawImage(lvupBitmap, 0, 6, lvupBitmap.Width, lvupBitmap.Height);
                 lvUpTime = 0;
+                StrtTimer();
             }
         }
 
@@ -132,8 +137,10 @@ namespace MonsterPang
                 DisableForm();
                 StopTimer();
                 level++;
+
                 ConvertMosterImage(level);
                 lvUpTime = 1;
+                stage.board.Refresh();
                 Invalidate();
                 EnableForm();
                 return;
@@ -163,7 +170,7 @@ namespace MonsterPang
 
         private void MonsterPang_MouseUp(object sender, MouseEventArgs e)
         {
-
+            
         }
 
         private void MonsterPang_MouseClick(object sender, MouseEventArgs e)
@@ -173,38 +180,26 @@ namespace MonsterPang
 
         private void stones_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void stones_MouseDown(object sender, MouseEventArgs e)
         {
-           
-        }
-
-        private void MonsterPang_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MonsterPang_MouseDown(object sender, MouseEventArgs e)
-        {
-                        int row1 = -1;
-            int col1 = -1;
-            int row2 = -1;
-            int col2 = -1;
-
+                  
             if (pointNum == 0)
             {
-                first = e.Location;
+                
+                first.X = e.Location.X;
+                first.Y = e.Location.Y;
 
                 for (int i = 0; i < boardGUI.GetLength(0); i++)
                 {
-                    if (((8 + (50 * i)) <= first.X) && (first.X < (8 + (50 * 1))))
+                    if (((8 + (50 * i)) <= first.X) && (first.X < (8 + (50 * (i + 1)))))
                     {
                         col1 = i;
                     }
 
-                    if (((164 + (52 * i)) <= first.Y) && (first.Y < (164 + (52 * 1))))
+                    if (((2 + (52 * i)) <= first.Y) && (first.Y < (2 + (52 * (i + 1)))))
                     {
                         row1 = i;
                     }
@@ -217,7 +212,8 @@ namespace MonsterPang
             }
             else if (pointNum == 1)
             {
-                second = e.Location;
+                second.X = e.Location.X;
+                second.Y = e.Location.Y;
                 for (int i = 0; i < boardGUI.GetLength(0); i++)
                 {
                     if (((8 + (50 * i)) <= second.X) && (second.X < (8 + (50 * 1))))
@@ -225,7 +221,7 @@ namespace MonsterPang
                         col2 = i;
                     }
 
-                    if (((164 + (52 * i)) <= second.Y) && (second.Y < (164 + (52 * 1))))
+                    if (((2 + (52 * i)) <= second.Y) && (second.Y < (2+ (52 * 1))))
                     {
                         row2 = i;
                     }
@@ -236,19 +232,38 @@ namespace MonsterPang
                     if (stage.IsSwitchable(row1, col1, row2, col2))
                     {
                         stage.Swap(row1, col1, row2, col2);
+                        row1 = -1;
+                        col1 = -1;
+                        row2 = -1;
+                        col2 = -1;
                         StrtTimer();
 
                     }
                     else
                     {
                         stage.board.Refresh();
+                        row1 = -1;
+                        col1 = -1;
+                        row2 = -1;
+                        col2 = -1;
                         Invalidate();
                         StrtTimer();
                     }
-                    pointNum = 0;
+                    
 
                 }
             }
+        }
+
+        private void MonsterPang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MonsterPang_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+           
         }
 
 

@@ -80,7 +80,7 @@
             this.MaximizeBox = false;
             this.Name = "MonsterPang";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "Form1";
+            this.Text = "MonsterPang!";
             this.Load += new System.EventHandler(this.MonsterPang_Load);
             this.Click += new System.EventHandler(this.MonsterPang_Click);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MonsterPang_MouseClick);
@@ -97,7 +97,7 @@
 
         private System.Windows.Forms.PictureBox stones;
         private System.Windows.Forms.PictureBox monsterGUI;
-        private System.Windows.Forms.Timer timer;
+        public System.Windows.Forms.Timer timer;
     }
 }
 

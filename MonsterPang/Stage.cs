@@ -90,6 +90,7 @@ namespace MonsterPang
         {
             monster.hp = monster.hp - num;
         }
+       
         public int ReadInteger()
         {
             Console.Write("값을 입력하세요 : ");
