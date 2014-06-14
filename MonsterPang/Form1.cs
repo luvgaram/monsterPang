@@ -104,6 +104,7 @@ namespace MonsterPang
             else
             {
                 e.Graphics.DrawImage(lvupBitmap, 0, 6, lvupBitmap.Width, lvupBitmap.Height);
+                Pause();
                 lvUpTime = 0;
                 StrtTimer();
             }
@@ -113,6 +114,7 @@ namespace MonsterPang
         {
             e.Graphics.DrawImage(hpBitmap, 10, 134, hpBitmap.Width, hpBitmap.Height);
             e.Graphics.DrawImage(hpBarBitmap, 32, 138, (stage.monster.hpPercent) * 25, 20);
+            
         }
 
         private void MonsterPang_Load(object sender, EventArgs e)
@@ -137,16 +139,26 @@ namespace MonsterPang
                 DisableForm();
                 StopTimer();
                 level++;
-
+                stage = new Stage(level);
                 ConvertMosterImage(level);
                 lvUpTime = 1;
-                stage.board.Refresh();
                 Invalidate();
                 EnableForm();
                 return;
             }
         }
 
+        /*
+        private void PaintAll ()
+        {
+            MonsterPang_Paint(null, null);
+            MonsterPang_Paint2(null, null);
+        }*/
+
+        public void Pause()
+        {
+            Thread.Sleep(2000);
+        }
 
         private void StrtTimer()
         {
@@ -214,14 +226,15 @@ namespace MonsterPang
             {
                 second.X = e.Location.X;
                 second.Y = e.Location.Y;
+
                 for (int i = 0; i < boardGUI.GetLength(0); i++)
                 {
-                    if (((8 + (50 * i)) <= second.X) && (second.X < (8 + (50 * 1))))
+                    if (((8 + (50 * i)) <= second.X) && (second.X < (8 + (50 * (i + 1)))))
                     {
                         col2 = i;
                     }
 
-                    if (((2 + (52 * i)) <= second.Y) && (second.Y < (2+ (52 * 1))))
+                    if (((2 + (52 * i)) <= second.Y) && (second.Y < (2 + (52 * (i + 1)))))
                     {
                         row2 = i;
                     }

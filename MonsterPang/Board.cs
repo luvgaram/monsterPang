@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace MonsterPang
 {
@@ -148,6 +149,7 @@ namespace MonsterPang
             while ((GetStonesData(row + difRow, col + difCol) != null) && (type == stones[row + difRow, col + difCol].type))
             {
                 stones[row + difRow, col + difCol].type = 0;
+                Thread.Sleep(200);
                 row = row + difRow;
                 col = col + difCol;
             }
@@ -168,7 +170,6 @@ namespace MonsterPang
         {
             if (stones[row, col].type == 0)
             {
-                Console.WriteLine("now sorting[{0},{1}]", row, col);
                 int temp = row - 1;
                 while (stones[row, col].type == 0)
                 {

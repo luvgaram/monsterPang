@@ -89,6 +89,7 @@ namespace MonsterPang
         public void Damage(int num)
         {
             monster.hp = monster.hp - num;
+            monster.hpPercent = (int)(monster.hp / (Math.Log(level + 1) * 50) * 10);
         }
        
         public int ReadInteger()
