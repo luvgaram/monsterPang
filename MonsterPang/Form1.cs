@@ -122,27 +122,18 @@ namespace MonsterPang
                 DisableForm();
                 stage.DeleteContinuously();
                 Invalidate();
-<<<<<<< HEAD
-                if (stage.IsMovalble())
-                {
-                    StopTimer();
-=======
+
                 if (stage.IsMovable())
                 {
                     StopTimer(); // mouse event 받을 준비!
->>>>>>> 6d0d1f88332f714f1ae62e48574ac40bd9b329bb
                     EnableForm();
                     return;
                 }
                 else
                 {
                     stage.board.Refresh();
-<<<<<<< HEAD
-
-=======
                     Invalidate();
                     return;
->>>>>>> 6d0d1f88332f714f1ae62e48574ac40bd9b329bb
                 }
             }
             else{
