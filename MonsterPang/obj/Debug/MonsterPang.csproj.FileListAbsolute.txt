@@ -39,3 +39,6 @@ C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang
 C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.Properties.Resources.resources
 C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.csproj.GenerateResource.Cache
 C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.LvUpDiag.resources
+C:\Users\Garam\Dropbox\2014_1\monsterPang\monsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
+C:\Users\Garam\Dropbox\2014_1\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.exe
+C:\Users\Garam\Dropbox\2014_1\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
