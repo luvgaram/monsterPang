@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace MonsterPang
 {
@@ -15,6 +16,8 @@ namespace MonsterPang
         public ending()
         {
             InitializeComponent();
+            SoundPlayer sndplayr = new SoundPlayer(Properties.Resources.endingSound);
+            sndplayr.Play();
         }
 
         private void button1_Click(object sender, EventArgs e)

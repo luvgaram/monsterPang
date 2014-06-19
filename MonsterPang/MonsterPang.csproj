@@ -106,9 +106,6 @@
     <None Include="Resources\hp.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ico.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\monster1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +158,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\end.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\endingSound.WAV" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lvUpSound.WAV" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\errorSound.WAV" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

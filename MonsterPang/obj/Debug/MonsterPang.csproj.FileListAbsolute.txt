@@ -8,3 +8,15 @@ C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\D
 C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.csproj.GenerateResource.Cache
 C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.exe
 C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
+C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.csprojResolveAssemblyReference.cache
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.exe
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\bin\Debug\MonsterPang.exe
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\bin\Debug\MonsterPang.pdb
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.csprojResolveAssemblyReference.cache
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.ending.resources
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.MonsterPang.resources
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.LvUpDiag.resources
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.Properties.Resources.resources
+F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.csproj.GenerateResource.Cache

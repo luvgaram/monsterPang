@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
+using System.Media;
 
 namespace MonsterPang
 {
@@ -19,7 +13,7 @@ namespace MonsterPang
         private Bitmap stBitmap;
         private Stone[,] boardGUI = new Stone[Board.boardSize,Board.boardSize];
         private Stage stage;
-        private int level = 1; //전역변수로 추가
+        private int level = 1;
         public Point first;
         public Point second;
         public int pointNum = 0;
@@ -31,7 +25,7 @@ namespace MonsterPang
         public MonsterPang()
         {
             InitializeComponent();
-            stage = new Stage(level); //보드 만들고, 몬스터 만들고!
+            stage = new Stage(level);
             ConvertMosterImage(level);
             StrtTimer();
         }
@@ -122,6 +116,8 @@ namespace MonsterPang
             {
                 DisableForm();
                 stage.DeleteContinuously();
+                SoundPlayer sndplayr = new SoundPlayer(Properties.Resources.stoneSound);
+                sndplayr.Play();
                 Invalidate();
 
                 if (stage.IsMovalble())
@@ -251,6 +247,8 @@ namespace MonsterPang
                     col1 = -1;
                     row2 = -1;
                     col2 = -1;
+                    SoundPlayer error = new SoundPlayer(Properties.Resources.errorSound);
+                    error.Play();
                     Invalidate();
                 }
             }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ending));
             this.Close = new System.Windows.Forms.Button();
             this.replay = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -66,6 +67,7 @@
             this.Controls.Add(this.Close);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "ending";
             this.ResumeLayout(false);
