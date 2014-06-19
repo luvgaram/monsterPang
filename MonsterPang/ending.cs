@@ -22,5 +22,11 @@ namespace MonsterPang
             this.DialogResult = DialogResult.OK;
             this.Close();
         }
+
+        private void replay_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Yes;
+            this.Close();
+        }
     }
 }

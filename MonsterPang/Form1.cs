@@ -19,7 +19,7 @@ namespace MonsterPang
         private Bitmap stBitmap;
         private Stone[,] boardGUI = new Stone[Board.boardSize,Board.boardSize];
         private Stage stage;
-        private int level = 5; //전역변수로 추가
+        private int level = 1; //전역변수로 추가
         public Point first;
         public Point second;
         public int pointNum = 0;
@@ -143,9 +143,18 @@ namespace MonsterPang
                 {
                     StopTimer();
                     ending endDiag = new ending();
+
                     if (endDiag.ShowDialog() == DialogResult.OK)
                     {
                         this.Close();
+                    }
+                    else
+                    {
+                        level = 1;
+                        stage = new Stage(level);
+                        ConvertMosterImage(level);
+                        Invalidate();
+                        StrtTimer();
                     }
                 }
                 else
@@ -159,7 +168,6 @@ namespace MonsterPang
                         stage = new Stage(level);
                         ConvertMosterImage(level);
                         Invalidate();
-                        EnableForm();
                         StrtTimer();
                     }
                     return;
@@ -172,7 +180,7 @@ namespace MonsterPang
             timer.Start();
         }
 
-        private void StopTimer() //edit
+        private void StopTimer()
         {
             timer.Stop();
         }
@@ -187,20 +195,7 @@ namespace MonsterPang
             this.Enabled = false;
         }
 
-        private void MonsterPang_MouseUp(object sender, MouseEventArgs e)
-        {
-            
-        }
 
-        private void MonsterPang_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-        private void stones_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void stones_MouseDown(object sender, MouseEventArgs e)
         {
@@ -218,25 +213,7 @@ namespace MonsterPang
                 {
                     row1 = i;
                 }
-            }//first.X, first.Y 를 row1, col1으로 변환해 할당하기, 이렇게 할당했기 때문에 엄한 데 클릭하면 할당이 안될 수 있다. 
-            /*    
-            if (row1 != -1 && col1 != -1) //할당 안되었을 때 대비하여!
-            {
-                pointNum++;
-            }*/
-
-            
-        }
-
-        private void MonsterPang_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MonsterPang_MouseDown(object sender, MouseEventArgs e)
-        {
-            
-           
+            }           
         }
 
         private void stones_MouseUp(object sender, MouseEventArgs e)
@@ -259,7 +236,6 @@ namespace MonsterPang
 
             if (row2 != -1 && col2 != -1)
             {
-                //pointNum = 0;
                 if (stage.IsSwitchable(row1, col1, row2, col2))
                 {
                     stage.Swap(row1, col1, row2, col2);
@@ -268,7 +244,6 @@ namespace MonsterPang
                     row2 = -1;
                     col2 = -1;
                     StrtTimer();
-
                 }
                 else
                 {
@@ -281,5 +256,30 @@ namespace MonsterPang
             }
         }
 
+        private void MonsterPang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MonsterPang_MouseDown(object sender, MouseEventArgs e)
+        {
+
+
+        }
+
+        private void MonsterPang_MouseUp(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void MonsterPang_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void stones_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
