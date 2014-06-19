@@ -50,6 +50,7 @@
             this.stones.Click += new System.EventHandler(this.stones_Click);
             this.stones.Paint += new System.Windows.Forms.PaintEventHandler(this.MonsterPang_Paint);
             this.stones.MouseDown += new System.Windows.Forms.MouseEventHandler(this.stones_MouseDown);
+            this.stones.MouseUp += new System.Windows.Forms.MouseEventHandler(this.stones_MouseUp);
             // 
             // monsterGUI
             // 
