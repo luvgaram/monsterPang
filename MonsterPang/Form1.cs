@@ -131,9 +131,18 @@ namespace MonsterPang
                 DisableForm();
                 stage.DeleteContinuously();
                 Invalidate();
-                StopTimer();
-                EnableForm();
-                return;
+                if (stage.IsMovable())
+                {
+                    StopTimer(); // mouse event 받을 준비!
+                    EnableForm();
+                    return;
+                }
+                else
+                {
+                    stage.board.Refresh();
+                    Invalidate();
+                    return;
+                }
             }
             else{
                 DisableForm();
@@ -172,12 +181,12 @@ namespace MonsterPang
 
         private void EnableForm()
         {
-            this.Enabled = true;
+            stones.Enabled = true;
         }
 
         private void DisableForm()
         {
-            this.Enabled = false;
+            stones.Enabled = false;
         }
 
         private void MonsterPang_MouseUp(object sender, MouseEventArgs e)
@@ -242,6 +251,7 @@ namespace MonsterPang
                 if (row2 != -1 && col2 != -1)
                 {
                     pointNum = 0;
+
                     if (stage.IsSwitchable(row1, col1, row2, col2))
                     {
                         stage.Swap(row1, col1, row2, col2);
@@ -252,15 +262,13 @@ namespace MonsterPang
                         StrtTimer();
 
                     }
-                    else // 여기에 무버블한 지 알아보는 코드 추가해야겠다!
+                    else 
                     {
-                        stage.board.Refresh();
                         row1 = -1;
                         col1 = -1;
                         row2 = -1;
                         col2 = -1;
-                        Invalidate();
-                        StrtTimer();
+                        //Invalidate();
                     }
                     
 
