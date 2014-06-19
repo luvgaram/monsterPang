@@ -123,6 +123,7 @@ namespace MonsterPang
                 DisableForm();
                 stage.DeleteContinuously();
                 Invalidate();
+
                 if (stage.IsMovalble())
                 {
                     StopTimer();
@@ -132,6 +133,8 @@ namespace MonsterPang
                 else
                 {
                     stage.board.Refresh();
+                    Invalidate();
+                    return;
 
                 }
             }
@@ -201,74 +204,28 @@ namespace MonsterPang
 
         private void stones_MouseDown(object sender, MouseEventArgs e)
         {
-                  
-            if (pointNum == 0)
+            first.X = e.Location.X;
+            first.Y = e.Location.Y;
+
+            for (int i = 0; i < boardGUI.GetLength(0); i++)
             {
-                
-                first.X = e.Location.X;
-                first.Y = e.Location.Y;
-
-                for (int i = 0; i < boardGUI.GetLength(0); i++)
+                if (((8 + (50 * i)) <= first.X) && (first.X < (8 + (50 * (i + 1)))))
                 {
-                    if (((8 + (50 * i)) <= first.X) && (first.X < (8 + (50 * (i + 1)))))
-                    {
-                        col1 = i;
-                    }
-
-                    if (((2 + (52 * i)) <= first.Y) && (first.Y < (2 + (52 * (i + 1)))))
-                    {
-                        row1 = i;
-                    }
-                }//first.X, first.Y 를 row1, col1으로 변환해 할당하기, 이렇게 할당했기 때문에 엄한 데 클릭하면 할당이 안될 수 있다. 
-                if (row1 != -1 && col1 != -1) //할당 안되었을 때 대비하여!
-                {
-                    pointNum++;
+                    col1 = i;
                 }
 
-            }
-            else if (pointNum == 1)
+                if (((2 + (52 * i)) <= first.Y) && (first.Y < (2 + (52 * (i + 1)))))
+                {
+                    row1 = i;
+                }
+            }//first.X, first.Y 를 row1, col1으로 변환해 할당하기, 이렇게 할당했기 때문에 엄한 데 클릭하면 할당이 안될 수 있다. 
+            /*    
+            if (row1 != -1 && col1 != -1) //할당 안되었을 때 대비하여!
             {
-                second.X = e.Location.X;
-                second.Y = e.Location.Y;
+                pointNum++;
+            }*/
 
-                for (int i = 0; i < boardGUI.GetLength(0); i++)
-                {
-                    if (((8 + (50 * i)) <= second.X) && (second.X < (8 + (50 * (i + 1)))))
-                    {
-                        col2 = i;
-                    }
-
-                    if (((2 + (52 * i)) <= second.Y) && (second.Y < (2 + (52 * (i + 1)))))
-                    {
-                        row2 = i;
-                    }
-                }
-                if (row2 != -1 && col2 != -1)
-                {
-                    pointNum = 0;
-                    if (stage.IsSwitchable(row1, col1, row2, col2))
-                    {
-                        stage.Swap(row1, col1, row2, col2);
-                        row1 = -1;
-                        col1 = -1;
-                        row2 = -1;
-                        col2 = -1;
-                        StrtTimer();
-
-                    }
-                    else
-                    {
-                        row1 = -1;
-                        col1 = -1;
-                        row2 = -1;
-                        col2 = -1;
-                        Invalidate();
-                      
-                    }
-                    
-
-                }
-            }
+            
         }
 
         private void MonsterPang_Click(object sender, EventArgs e)
@@ -282,7 +239,47 @@ namespace MonsterPang
            
         }
 
+        private void stones_MouseUp(object sender, MouseEventArgs e)
+        {
+            second.X = e.Location.X;
+            second.Y = e.Location.Y;
 
+            for (int i = 0; i < boardGUI.GetLength(0); i++)
+            {
+                if (((8 + (50 * i)) <= second.X) && (second.X < (8 + (50 * (i + 1)))))
+                {
+                    col2 = i;
+                }
+
+                if (((2 + (52 * i)) <= second.Y) && (second.Y < (2 + (52 * (i + 1)))))
+                {
+                    row2 = i;
+                }
+            }
+
+            if (row2 != -1 && col2 != -1)
+            {
+                //pointNum = 0;
+                if (stage.IsSwitchable(row1, col1, row2, col2))
+                {
+                    stage.Swap(row1, col1, row2, col2);
+                    row1 = -1;
+                    col1 = -1;
+                    row2 = -1;
+                    col2 = -1;
+                    StrtTimer();
+
+                }
+                else
+                {
+                    row1 = -1;
+                    col1 = -1;
+                    row2 = -1;
+                    col2 = -1;
+                    Invalidate();
+                }
+            }
+        }
 
     }
 }
