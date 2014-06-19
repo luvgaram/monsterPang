@@ -252,7 +252,7 @@ namespace MonsterPang
                         StrtTimer();
 
                     }
-                    else
+                    else // 여기에 무버블한 지 알아보는 코드 추가해야겠다!
                     {
                         stage.board.Refresh();
                         row1 = -1;
