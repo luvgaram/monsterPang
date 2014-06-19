@@ -47,10 +47,11 @@ namespace MonsterPang
             board.Swap(row1, col1, row2, col2); 
         }
 
-        public bool IsMovable()
+        public bool IsMovalble()
         {
             return board.IsMovable();
         }
+
 
         /*
         public void Play()

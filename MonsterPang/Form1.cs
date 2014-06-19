@@ -123,9 +123,9 @@ namespace MonsterPang
                 stage.DeleteContinuously();
                 Invalidate();
 
-                if (stage.IsMovable())
+                if (stage.IsMovalble())
                 {
-                    StopTimer(); // mouse event 받을 준비!
+                    StopTimer();
                     EnableForm();
                     return;
                 }
@@ -134,6 +134,7 @@ namespace MonsterPang
                     stage.board.Refresh();
                     Invalidate();
                     return;
+
                 }
             }
             else{
@@ -166,12 +167,12 @@ namespace MonsterPang
 
         private void EnableForm()
         {
-            stones.Enabled = true;
+            this.Enabled = true;
         }
 
         private void DisableForm()
         {
-            stones.Enabled = false;
+            this.Enabled = false;
         }
 
         private void MonsterPang_MouseUp(object sender, MouseEventArgs e)
@@ -236,7 +237,6 @@ namespace MonsterPang
                 if (row2 != -1 && col2 != -1)
                 {
                     pointNum = 0;
-
                     if (stage.IsSwitchable(row1, col1, row2, col2))
                     {
                         stage.Swap(row1, col1, row2, col2);
@@ -247,14 +247,14 @@ namespace MonsterPang
                         StrtTimer();
 
                     }
-                    else 
+                    else
                     {
                         row1 = -1;
                         col1 = -1;
                         row2 = -1;
                         col2 = -1;
-
                         Invalidate();
+                      
                     }
                     
 
