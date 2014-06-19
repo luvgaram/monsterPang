@@ -1,48 +1,10 @@
-C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
-C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
-F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
-F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe
-F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\bin\Debug\MonsterPang.pdb
-F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.csprojResolveAssemblyReference.cache
-F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.Properties.Resources.resources
-F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.csproj.GenerateResource.Cache
-F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.exe
-F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
-F:\Down\My Dropbox\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.MonsterPang.resources
-C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.exe
-C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
-C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe
-C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\bin\Debug\MonsterPang.pdb
-C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.csprojResolveAssemblyReference.cache
-C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.MonsterPang.resources
-C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.Properties.Resources.resources
-C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.csproj.GenerateResource.Cache
-C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\monsterPang\MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
-C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.exe
-C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
-C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\monsterPang\MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe
-C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\monsterPang\MonsterPang\MonsterPang\bin\Debug\MonsterPang.pdb
-C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.csprojResolveAssemblyReference.cache
-C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.MonsterPang.resources
-C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.Properties.Resources.resources
-C:\Users\Garam\Dropbox\2014_1\Projects\MonsterPang\monsterPang\MonsterPang\MonsterPang\obj\Debug\MonsterPang.csproj.GenerateResource.Cache
-C:\Users\Garam\Dropbox\2014_1\Projects\_MonsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
-C:\Users\Garam\Dropbox\2014_1\Projects\_MonsterPang\MonsterPang\obj\Debug\MonsterPang.exe
-C:\Users\Garam\Dropbox\2014_1\Projects\_MonsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
 C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
-C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.exe
-C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
 C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\bin\Debug\MonsterPang.exe
 C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\bin\Debug\MonsterPang.pdb
 C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.csprojResolveAssemblyReference.cache
 C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.MonsterPang.resources
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.LvUpDiag.resources
 C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.Properties.Resources.resources
 C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.csproj.GenerateResource.Cache
-C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.LvUpDiag.resources
-<<<<<<< HEAD
-C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.LvUpDiag.resources
-=======
-C:\Users\Garam\Dropbox\2014_1\monsterPang\monsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
-C:\Users\Garam\Dropbox\2014_1\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.exe
-C:\Users\Garam\Dropbox\2014_1\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
->>>>>>> 25ee5c538ff240e4cbe5bffd61cdc3f647db8ba6
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.exe
+C:\Users\김다혜\Documents\Visual Studio 2013\Projects\MonsterPang\MonsterPang_GUI\monsterPang\MonsterPang\obj\Debug\MonsterPang.pdb

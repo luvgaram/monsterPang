@@ -31,7 +31,8 @@ namespace MonsterPang
         public MonsterPang()
         {
             InitializeComponent();
-            stage = new Stage(level); //보드 만들고, 몬스터 만들고!
+            stage = new Stage(level);//보드 만들고, 몬스터 만들고!
+            ConvertMosterImage(level);
             StrtTimer();
         }
 
