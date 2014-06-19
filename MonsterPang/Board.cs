@@ -30,12 +30,6 @@ namespace MonsterPang
             }
         }
 
-        /*public Stone[,] ShowBoard(int row, int col)
-        {
-             return stones[row, col];
-        }
-         */
-
         public int Check(ref int score, int row, int col, int difRow, int difCol)
         {
             if ((GetStonesData(row + difRow, col + difCol) != null) && (stones[row, col].type != stones[row + difRow, col + difCol].type))
@@ -105,7 +99,6 @@ namespace MonsterPang
                     }
                 }
             }
-            //Console.WriteLine("Delete [{0},{1}]", maxRow, maxCol);
             Delete(maxRow, maxCol, maxType);
             
             if (maxScore < 3)
@@ -149,7 +142,7 @@ namespace MonsterPang
             while ((GetStonesData(row + difRow, col + difCol) != null) && (type == stones[row + difRow, col + difCol].type))
             {
                 stones[row + difRow, col + difCol].type = 0;
-                Thread.Sleep(200);
+                Thread.Sleep(100);
                 row = row + difRow;
                 col = col + difCol;
             }

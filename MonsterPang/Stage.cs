@@ -47,6 +47,10 @@ namespace MonsterPang
             board.Swap(row1, col1, row2, col2); 
         }
 
+        public bool IsMovalble()
+        {
+            return board.IsMovable();
+        }
 
 
         /*
@@ -89,7 +93,7 @@ namespace MonsterPang
         public void Damage(int num)
         {
             monster.hp = monster.hp - num;
-            monster.hpPercent = (int)(monster.hp / (Math.Log(level + 1) * 50) * 10);
+            monster.hpPercent = (int)(monster.hp / (Math.Log(level + 1) * 50) * 50);
         }
        
         public int ReadInteger()

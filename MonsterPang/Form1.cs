@@ -20,7 +20,6 @@ namespace MonsterPang
         private Stone[,] boardGUI = new Stone[Board.boardSize,Board.boardSize];
         private Stage stage;
         private int level = 1; //전역변수로 추가
-        private int lvUpTime = 0;
         public Point first;
         public Point second;
         public int pointNum = 0;
@@ -57,8 +56,7 @@ namespace MonsterPang
 
         private void MonsterPang_Paint(object sender, PaintEventArgs e)
         {
-            if (lvUpTime == 0)
-            {
+
                 int x = 8;
                 int y = 2;
 
@@ -101,20 +99,12 @@ namespace MonsterPang
                     }
                     y = y + 52;
                 }
-            }
-            else
-            {
-                e.Graphics.DrawImage(lvupBitmap, 0, 6, lvupBitmap.Width, lvupBitmap.Height);
-                Pause();
-                lvUpTime = 0;
-                StrtTimer();
-            }
         }
 
         private void MonsterPang_Paint2(object sender, PaintEventArgs e)
         {
             e.Graphics.DrawImage(hpBitmap, 10, 134, hpBitmap.Width, hpBitmap.Height);
-            e.Graphics.DrawImage(hpBarBitmap, 32, 138, (stage.monster.hpPercent) * 25, 20);
+            e.Graphics.DrawImage(hpBarBitmap, 32, 138, (stage.monster.hpPercent) * 5, 20);
             
         }
 
@@ -127,38 +117,39 @@ namespace MonsterPang
 
         private void timer1_Tick(object sender, EventArgs e) //edit
         {
-            if(stage.monster.hp>0)
+            if(stage.monster.hp > 3)
             {
                 DisableForm();
                 stage.DeleteContinuously();
                 Invalidate();
-                StopTimer();
-                EnableForm();
-                return;
+                if (stage.IsMovalble())
+                {
+                    StopTimer();
+                    EnableForm();
+                    return;
+                }
+                else
+                {
+                    stage.board.Refresh();
+
+                }
             }
             else{
-                DisableForm();
-                StopTimer();
+            
                 level++;
-                ConvertMosterImage(level); // 위치 변경
-                lvUpTime = 1;
-                stage = new Stage(level);
-                Invalidate();
-                EnableForm();
+                StopTimer();
+                LvUpDiag dialog = new LvUpDiag();
+                
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    stage = new Stage(level);
+                    ConvertMosterImage(level);
+                    Invalidate();
+                    EnableForm();
+                    StrtTimer();
+                }
                 return;
             }
-        }
-
-        /*
-        private void PaintAll ()
-        {
-            MonsterPang_Paint(null, null);
-            MonsterPang_Paint2(null, null);
-        }*/
-
-        public void Pause()
-        {
-            Thread.Sleep(2000);
         }
 
         private void StrtTimer()
@@ -255,13 +246,12 @@ namespace MonsterPang
                     }
                     else
                     {
-                        stage.board.Refresh();
                         row1 = -1;
                         col1 = -1;
                         row2 = -1;
                         col2 = -1;
                         Invalidate();
-                        StrtTimer();
+                      
                     }
                     
 
