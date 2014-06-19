@@ -16,7 +16,7 @@ namespace MonsterPang
         public Monster(int level)
         {
             hp = Math.Log(level + 1) * 50;
-            hpPercent = (int)(hp / (Math.Log(level + 1) * 50)*10);
+            hpPercent = (int)(hp / (Math.Log(level + 1) * 50) * 10);
 
             switch (level)
             {

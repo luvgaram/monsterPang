@@ -16,12 +16,7 @@ namespace MonsterPang
         private Bitmap hpBitmap = Properties.Resources.hp;
         private Bitmap hpBarBitmap = Properties.Resources.hpBar;
         private Bitmap lvupBitmap = Properties.Resources.lvup;
-        private Bitmap st1Bitmap = Properties.Resources.stone1;
-        private Bitmap st2Bitmap = Properties.Resources.stone2;
-        private Bitmap st3Bitmap = Properties.Resources.stone3;
-        private Bitmap st4Bitmap = Properties.Resources.stone4;
-        private Bitmap st5Bitmap = Properties.Resources.stone5;
-        private Bitmap st6Bitmap = Properties.Resources.stone6;
+        private Bitmap stBitmap;
         private Stone[,] boardGUI = new Stone[Board.boardSize,Board.boardSize];
         private Stage stage;
         private int level = 1; //전역변수로 추가
@@ -76,22 +71,28 @@ namespace MonsterPang
                         switch (boardGUI[row, col].type)
                         {
                             case 1:
-                                e.Graphics.DrawImage(st1Bitmap, x, y, st1Bitmap.Width, st1Bitmap.Height);
+                                stBitmap = Properties.Resources.stone1;
+                                e.Graphics.DrawImage(stBitmap, x, y, stBitmap.Width, stBitmap.Height);
                                 break;
                             case 2:
-                                e.Graphics.DrawImage(st2Bitmap, x, y, st2Bitmap.Width, st2Bitmap.Height);
+                                stBitmap = Properties.Resources.stone2;
+                                e.Graphics.DrawImage(stBitmap, x, y, stBitmap.Width, stBitmap.Height);
                                 break;
                             case 3:
-                                e.Graphics.DrawImage(st3Bitmap, x, y, st3Bitmap.Width, st3Bitmap.Height);
+                                stBitmap = Properties.Resources.stone3;
+                                e.Graphics.DrawImage(stBitmap, x, y, stBitmap.Width, stBitmap.Height);
                                 break;
                             case 4:
-                                e.Graphics.DrawImage(st4Bitmap, x, y, st4Bitmap.Width, st4Bitmap.Height);
+                                stBitmap = Properties.Resources.stone4;
+                                e.Graphics.DrawImage(stBitmap, x, y, stBitmap.Width, stBitmap.Height);
                                 break;
                             case 5:
-                                e.Graphics.DrawImage(st5Bitmap, x, y, st5Bitmap.Width, st5Bitmap.Height);
+                                stBitmap = Properties.Resources.stone5;
+                                e.Graphics.DrawImage(stBitmap, x, y, stBitmap.Width, stBitmap.Height);
                                 break;
                             case 6:
-                                e.Graphics.DrawImage(st6Bitmap, x, y, st6Bitmap.Width, st6Bitmap.Height);
+                                stBitmap = Properties.Resources.stone6;
+                                e.Graphics.DrawImage(stBitmap, x, y, stBitmap.Width, stBitmap.Height);
                                 break;
                             default:
                                 break;
@@ -148,9 +149,9 @@ namespace MonsterPang
                 DisableForm();
                 StopTimer();
                 level++;
-                stage = new Stage(level);
-                ConvertMosterImage(level);
+                ConvertMosterImage(level); // 위치 변경
                 lvUpTime = 1;
+                stage = new Stage(level);
                 Invalidate();
                 EnableForm();
                 return;
