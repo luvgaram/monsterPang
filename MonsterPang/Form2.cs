@@ -12,6 +12,7 @@ namespace MonsterPang
 {
     public partial class LvUpDiag : Form
     {
+        private Bitmap ending = Properties.Resources.end;
         public LvUpDiag()
         {
             InitializeComponent();

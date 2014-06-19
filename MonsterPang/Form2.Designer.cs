@@ -58,7 +58,6 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LvUpDiag";
-            this.Text = "Form2";
             this.ResumeLayout(false);
 
         }

@@ -19,7 +19,7 @@ namespace MonsterPang
         private Bitmap stBitmap;
         private Stone[,] boardGUI = new Stone[Board.boardSize,Board.boardSize];
         private Stage stage;
-        private int level = 1; //전역변수로 추가
+        private int level = 5; //전역변수로 추가
         public Point first;
         public Point second;
         public int pointNum = 0;
@@ -32,6 +32,7 @@ namespace MonsterPang
         {
             InitializeComponent();
             stage = new Stage(level); //보드 만들고, 몬스터 만들고!
+            ConvertMosterImage(level);
             StrtTimer();
         }
 
@@ -135,20 +136,31 @@ namespace MonsterPang
                 }
             }
             else{
-            
-                level++;
-                StopTimer();
-                LvUpDiag dialog = new LvUpDiag();
-                
-                if (dialog.ShowDialog() == DialogResult.OK)
+                if (level == 5)
                 {
-                    stage = new Stage(level);
-                    ConvertMosterImage(level);
-                    Invalidate();
-                    EnableForm();
-                    StrtTimer();
+                    StopTimer();
+                    ending endDiag = new ending();
+                    if (endDiag.ShowDialog() == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
                 }
-                return;
+                else
+                {
+                    level++;
+                    StopTimer();
+                    LvUpDiag dialog = new LvUpDiag();
+
+                    if (dialog.ShowDialog() == DialogResult.OK)
+                    {
+                        stage = new Stage(level);
+                        ConvertMosterImage(level);
+                        Invalidate();
+                        EnableForm();
+                        StrtTimer();
+                    }
+                    return;
+                }
             }
         }
 

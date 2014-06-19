@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ending.Designer.cs">
+      <DependentUpon>ending.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +68,9 @@
     <Compile Include="Board.cs" />
     <Compile Include="Stage.cs" />
     <Compile Include="Stone.cs" />
+    <EmbeddedResource Include="ending.resx">
+      <DependentUpon>ending.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\hpBar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\end.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

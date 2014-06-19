@@ -42,3 +42,4 @@ C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\D
 C:\Users\Garam\Dropbox\2014_1\monsterPang\monsterPang\MonsterPang\bin\Debug\MonsterPang.exe.config
 C:\Users\Garam\Dropbox\2014_1\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.exe
 C:\Users\Garam\Dropbox\2014_1\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.pdb
+C:\Users\Garam\Dropbox\2014_1\Projects\monsterPang\monsterPang\MonsterPang\obj\Debug\MonsterPang.ending.resources

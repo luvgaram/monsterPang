@@ -248,7 +248,7 @@ namespace MonsterPang
             {
                 return true;
             }
-            if ((GetStonesData(row, col - 2) != null) && AreSameType(row, col, 2, ref temps))
+            if ((GetStonesData(row, col + 2) != null) && AreSameType(row, col, 2, ref temps))
             {
                 return true;
             }
